@@ -11,3 +11,454 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+  font-family: Raleway;
+  color: #777;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+.nav ul {
+  margin: 0;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav a {
+  display: inline-block;
+  padding: .5em;
+  color: white;
+  text-decoration: none;
+}
+
+.mainNav {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: lighter;
+  border-bottom: 1px solid rgba(255, 255, 255, .3)
+}
+
+.mainNav li, .mainNavFooter li {
+  padding: 0 5%;
+}
+
+.nav a:hover {
+  background-color: rgba(255, 255, 255, .3)
+}
+
+.mainHeader {
+  background-color: rgb(41, 39, 35);
+  background-blend-mode: multiply;
+  background-size: cover;
+  padding-bottom: 20px;
+}
+
+.bandName {
+  text-align: center;
+  margin: 0;
+  font-size: 2.5em;
+  font-family: "Booter - Zero Zero";
+  font-weight: normal;
+  color: white;
+}
+
+.bandNameLarge {
+  font-size: 2.5em;
+}
+
+.contentSection {
+  margin: 1em;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+.sectionHeader {
+  font-weight: normal;
+  color: #333;
+  text-align: center;
+  font-size: 2em;
+}
+
+.about-band-image {
+  float: left;
+  height: 200px;
+  width: 200px;
+  margin: 15px;
+  border-radius: 50%;
+}
+
+.mainFooter {
+  background-color: rgb(41, 39, 35);
+  color: white;
+  padding: .25em 0;
+}
+
+.mainFooterContainer {
+  display: flex;
+  align-items: center;
+}
+
+.mainFooterContainer ul {
+  flex-grow: 1;
+  text-align: end;
+}
+
+.footerNav li {
+  padding: 0 .5em;
+}
+
+.footerNav img {
+  width: 30px;
+  height: 30px;
+}
+
+.btn {
+  text-align: center;
+  vertical-align: middle;
+  padding: .37em .37em;
+  cursor: pointer;
+}
+
+.btn-header {
+  margin: .5em 15% 2em 15%;
+  color: white;
+  border: 2px solid #2D9CDB;
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 0;
+  font-size: 1.5em;
+  font-weight: lighter;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.btn-header:hover {
+  background-color: rgba(255, 255, 255, .3);
+}
+
+.btn-play {
+  display: block;
+  margin: 0 auto;
+  color: #2D9CDB;
+  font-size: 4em;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  text-align: center;
+}
+
+.btnPrimary {
+  color: white;
+  background-color: #56CCF2;
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+}
+
+.btnPrimary:hover {
+  background-color: #2D9CDB;
+}
+
+.btnGreen {
+  color: white;
+  background-color: #56f278;
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+}
+
+.btnGreen:hover {
+  background-color: #56f278;
+}
+
+.tour-row {
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.tour-row:last-child {
+  border: none;
+}
+
+.tour-item {
+  display: inline-block;
+  padding-right: .5em;
+}
+
+.tour-date {
+  color: #555;
+  width: 11%;
+  font-weight: bold;
+}
+
+.tour-city {
+  width: 24%;
+}
+
+.tour-arena {
+  width: 42%;
+}
+
+.tour-btn {
+  max-width: 19%;
+}
+
+.shopItem {
+  margin: 30px;
+}
+
+.shopItemTitle {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.shopItemImage {
+  height: 250px;
+  width: 300px;
+}
+
+.shopItemDetails {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.shopItemPrice {
+  flex-grow: 1;
+  color: #333;
+}
+
+.shopItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cartHeader {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #333;
+}
+
+.cartColumn {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.cartRow {
+  display: flex;
+}
+
+.cartItem {
+  width: 45%;
+}
+
+.cartPrice {
+  width: 20%;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.cartQuantity {
+  width: 35%;
+}
+
+.cartItemTitle {
+  color: #333;
+  margin-left: .5em;
+  font-size: 1.2em;
+}
+
+.cartItem-image {
+  width: 75px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.btnDanger {
+  color: white;
+  background-color: #EB5757;
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+}
+
+.btnDanger:hover {
+  background-color: #CC4C4C;
+}
+
+.cartQuantityInput {
+  height: 34px;
+  width: 50px;
+  border-radius: 5px;
+  border: 1px solid #56CCF2;
+  background-color: #eee;
+  color: #333;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 25px;
+}
+
+.cartRow:last-child {
+  border-bottom: 1px solid black;
+}
+
+.cartRow:last-child .cartColumn {
+  border: none;
+}
+
+.cartTotal {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.cartTotalTitle {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 20px;
+}
+
+.cartTotalPrice {
+  color: #333;
+  font-size: 1.1em;
+}
+
+.btnPurchase {
+  display: block;
+  margin: 40px auto 80px auto;
+  font-size: 1.15em;
+  width: 32%;
+}
+#parent {
+  display: table;
+  width: 100%;
+}
+#form_login {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.bodyPart{
+   min-height: 250px;
+}
+
+form div.form-action-buttons{
+  text-align: right;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0000ee;
+  margin-right: 4px;
+}
+
+label.validation-error{
+  color:   red;
+  margin-left: 5px;
+}
+
+.hide{
+  display:none;
+}
+
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+width: 50%;
+padding: 12px 20px;
+margin: 8px 0;
+display: block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+
+button {
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 50%;
+}
+
+button:hover {
+opacity: 0.8;
+}
+
+.cancelbtn {
+width: auto;
+padding: 10px 18px;
+background-color: #f44336;
+}
+
+.imgcontainer {
+text-align: center;
+margin: 24px 0 12px 0;
+}
+
+img.avatar {
+width: 15%;
+border-radius: 50%;
+}
+
+.container {
+padding: 16px;
+}
+
+span.psw {
+float: right;
+padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+span.psw {
+   display: block;
+   float: none;
+}
+.cancelbtn {
+   width: 100%;
+}
+}
+
+.orderSection .cartColumn{margin-right: 0px;}
+
+#nameWelcomeSection {
+  font-size: 1.7em;
+  color: black;
+  padding: 10px;
+}
+.mainNavFooter {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: lighter;
+  border-top: 1px solid rgba(255, 255, 255, .3);
+}
+
+.mainContainer{min-height: 320px;}
