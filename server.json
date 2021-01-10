@@ -64,65 +64,9 @@
     [
       {
         "id": 1,
-        "genOrderId": 12287,
-        "productId": null,
-        "quantity": null,
-        "name": "Grilled Chicken",
-        "price": "87.99",
-        "image": "grilled.png",
-        "status": 2
-      }
-    ],
-    [
-      {
-        "id": 1,
-        "genOrderId": 421010,
-        "productId": null,
-        "quantity": null,
-        "name": "Grilled Chicken",
-        "price": "87.99",
-        "image": "grilled.png",
-        "status": 3
-      }
-    ],
-    [
-      {
-        "id": 1,
-        "genOrderId": 236367,
-        "productId": null,
-        "quantity": null,
-        "name": "Chicken Nuggets",
-        "price": "43.99",
-        "image": "nuggets.png",
-        "status": 1
-      },
-      {
-        "id": 2,
-        "genOrderId": 236367,
-        "productId": null,
-        "quantity": null,
-        "name": "Chicken Nuggets",
-        "price": "43.99",
-        "image": "nuggets.png",
-        "status": 1
-      },
-      {
-        "id": 3,
-        "genOrderId": 236367,
-        "productId": null,
-        "quantity": null,
-        "name": "Grilled Chicken",
-        "price": "87.99",
-        "image": "grilled.png",
-        "status": 1
-      }
-    ],
-    [
-      {
-        "id": 1,
-        "genOrderId": 793788,
-        "productId": null,
-        "quantity": null,
+        "genOrderId": 1610297316217,
+        "productId": 2,
+        "quantity": 1,
         "name": "Cheezy Pizza",
         "price": "22.99",
         "image": "pizza.png",

@@ -20,15 +20,15 @@ class CartItems extends React.Component {
       alert("Add any Product(s) to cart");
       return;
     }
-    let genOrderId = Math.floor(Math.random() * (999999 - 1001 + 1) + 1001);
+    let genOrderId = Date.now();
     let orderDataArray = [];
     let orderDataObj = {};
     for (let inc = 0; inc < cartItemsObj.length; inc++) {
       orderDataObj = {
         id: inc + 1,
         genOrderId,
-        productId: parseInt(cartItemsObj[inc].productId),
-        quantity: parseInt(cartItemsObj[inc].quantity),
+        productId: parseInt(cartItemsObj[inc].id),
+        quantity: 1,
         name: cartItemsObj[inc].name,
         price: cartItemsObj[inc].price,
         image: cartItemsObj[inc].image,
@@ -55,7 +55,13 @@ class CartItems extends React.Component {
         console.log(error);
       });
   };
+  sum = (key) => {
+    return this.reduce((a, b) => a + (b[key] || 0), 0);
+}
   render() {
+    
+    let totalPrice = this.props.carts.reduce((a, b) => a + (parseFloat(b['price']) || 0), 0);
+    let formattedTotalPrice = Math.round(totalPrice * 100) / 100;
     return (
       <section className="container contentSection">
         <h2 className="sectionHeader">CART</h2>
@@ -74,12 +80,12 @@ class CartItems extends React.Component {
         </div>
         <div className="cartTotal">
           <strong className="cartTotalTitle">Total</strong>
-          <span className="cartTotalPrice">$0</span>
+          <span className="cartTotalPrice">${formattedTotalPrice}</span>
         </div>
         <button
           className="btn btnPrimary btnPurchase"
           type="button"
-          onClick={() => this.placeOrder()}
+          onClick={(e) => this.placeOrder()}
         >
           PLACE ORDER
         </button>

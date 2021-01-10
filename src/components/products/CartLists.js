@@ -1,10 +1,12 @@
 import React from "react";
 import { cartActions } from "../../functions/CartActions";
 import { connect } from "react-redux";
+import { removeCartSuccess } from "../../redux/";
+
 
 class CartLists extends React.Component {
   componentDidMount() {
-    cartActions.updateCartTotal();
+    //cartActions.updateCartTotal();
   }
   /**
    * [removeCartItem description]
@@ -13,19 +15,14 @@ class CartLists extends React.Component {
    *
    * @return  {[type]}         [return description]
    */
-  removeCartItemNew = (event) => {
-    let buttonClicked = event.target;
-    buttonClicked.parentElement.parentElement.remove();
-    cartActions.updateCartTotal();
+  removeCartItemNew = (product) => {
+    this.props.dispatch(removeCartSuccess(this.props.cart, product));
   };
   render() {
-    //debugger;
-    console.log('this.props.cart', this.props.cart)
     return (
       <>
         {this.props.cart &&
           this.props.cart.map((cart, i) => {
-            console.log(i, cart);
             let { id, name, price, image } = cart;
             let imageSrc = `assets/images/${image}`;
 
@@ -54,7 +51,7 @@ class CartLists extends React.Component {
                   <button
                     className="btn btnDanger"
                     type="button"
-                    onClick={this.removeCartItemNew}
+                    onClick={(e) => this.removeCartItemNew(cart)}
                   >
                     REMOVE
                   </button>

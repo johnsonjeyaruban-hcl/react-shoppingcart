@@ -53,3 +53,12 @@ export const addCartFailure = error => {
     payload: error
   };
 };
+
+
+export const removeCartSuccess = (carts, product) => {
+  let afterRemovedCart = carts.filter((cart) => cart.id !== product.id)
+  return {
+    type: "REMOVE_CART_SUCCESS",
+    payload: afterRemovedCart
+  }
+}

@@ -29,7 +29,7 @@ export default function addItemToCart(id, title, price, image) {
 const removeCartItem = (event) => {
   let buttonClicked = event.target;
   buttonClicked.parentElement.parentElement.remove();
-  updateCartTotal();
+  //updateCartTotal();
 };
 
 /**
@@ -37,43 +37,43 @@ const removeCartItem = (event) => {
  * @description Updating Cart total with the help of carItems classes based on quantity class
  * @returns
  */
-const updateCartTotal = () => {
-  let cartItemContainer = document.getElementsByClassName("cartItems")[0];
-  let cartRows = cartItemContainer.getElementsByClassName("cartRow");
-  let total = 0;
-  let productIdsArray = [];
-  let productIdsObj = {};
-  for (let i = 0; i < cartRows.length; i++) {
-    //+-- Updating cart objects in local
-    let cartRow = cartRows[i];
-    let cartProductId = cartRow.getElementsByClassName("cartProductId")[0]
-      .innerText;
-    let priceElement = cartRow.getElementsByClassName("cartPrice")[0];
-    let quantityElement = cartRow.getElementsByClassName(
-      "cartQuantityInput"
-    )[0];
-    let nameElement = cartRow.getElementsByClassName("cartItemTitle")[0];
-    let imageElement = cartRow.getElementsByClassName("cartItemImage")[0];
-    let productName = nameElement.innerText;
-    let imageSrc = imageElement.getAttribute("src");
-    let price = parseFloat(priceElement.innerText.replace("$", ""));
-    let quantity = quantityElement.value;
-    total = total + price * quantity;
-    productIdsObj = {
-      productId: cartProductId,
-      quantity: quantity,
-      price: price,
-      name: productName,
-      imageSrc,
-    };
-    productIdsArray.push(productIdsObj);
-  }
+// const updateCartTotal = () => {
+//   let cartItemContainer = document.getElementsByClassName("cartItems")[0];
+//   let cartRows = cartItemContainer.getElementsByClassName("cartRow");
+//   let total = 0;
+//   let productIdsArray = [];
+//   let productIdsObj = {};
+//   for (let i = 0; i < cartRows.length; i++) {
+//     //+-- Updating cart objects in local
+//     let cartRow = cartRows[i];
+//     let cartProductId = cartRow.getElementsByClassName("cartProductId")[0]
+//       .innerText;
+//     let priceElement = cartRow.getElementsByClassName("cartPrice")[0];
+//     let quantityElement = cartRow.getElementsByClassName(
+//       "cartQuantityInput"
+//     )[0];
+//     let nameElement = cartRow.getElementsByClassName("cartItemTitle")[0];
+//     let imageElement = cartRow.getElementsByClassName("cartItemImage")[0];
+//     let productName = nameElement.innerText;
+//     let imageSrc = imageElement.getAttribute("src");
+//     let price = parseFloat(priceElement.innerText.replace("$", ""));
+//     let quantity = quantityElement.value;
+//     total = total + price * quantity;
+//     productIdsObj = {
+//       productId: cartProductId,
+//       quantity: quantity,
+//       price: price,
+//       name: productName,
+//       imageSrc,
+//     };
+//     productIdsArray.push(productIdsObj);
+//   }
 
-  //+-- Update or Add Carts local storage obj (in future we can use this local storage to retrieve cart data even page refreshed but now only used as a reference object)
-  localStorage.setItem("cartItems", JSON.stringify(productIdsArray));
-  total = Math.round(total * 100) / 100;
-  document.getElementsByClassName("cartTotalPrice")[0].innerText = "$" + total;
-};
+//   //+-- Update or Add Carts local storage obj (in future we can use this local storage to retrieve cart data even page refreshed but now only used as a reference object)
+//   localStorage.setItem("cartItems", JSON.stringify(productIdsArray));
+//   total = Math.round(total * 100) / 100;
+//   document.getElementsByClassName("cartTotalPrice")[0].innerText = "$" + total;
+// };
 
 /**
  * @param
@@ -85,7 +85,7 @@ const quantityChanged = (event) => {
   if (isNaN(input.value) || input.value <= 0) {
     input.value = 1;
   }
-  updateCartTotal();
+  //updateCartTotal();
 };
 
 /**
@@ -94,6 +94,6 @@ const quantityChanged = (event) => {
  * @var {[type]}
  */
 export const cartActions = {
-  updateCartTotal,
-  removeCartItem,
+ // updateCartTotal,
+  removeCartItem
 };

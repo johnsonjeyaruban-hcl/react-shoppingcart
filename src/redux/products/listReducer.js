@@ -50,6 +50,13 @@ const listReducer = (state = initialState, action) => {
         error: action.payload,
       };
 
+    case "REMOVE_CART_SUCCESS":
+      return {
+        ...state,
+        cart:action.payload,
+        error: ""
+      }
+
     default:
       return state;
   }
