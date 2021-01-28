@@ -55,9 +55,9 @@ class CartItems extends React.Component {
         console.log(error);
       });
   };
-  sum = (key) => {
-    return this.reduce((a, b) => a + (b[key] || 0), 0);
-}
+//   sum = (key) => {
+//     return this.reduce((a, b) => a + (b[key] || 0), 0);
+// }
   render() {
     
     let totalPrice = this.props.carts.reduce((a, b) => a + (parseFloat(b['price']) || 0), 0);
